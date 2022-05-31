@@ -1,0 +1,13 @@
+<launch>
+    <!-- Launching controllers -->
+    <include file="$(find px_100_teleop)/launch/px_controllers.launch"/>
+
+    <!-- Launching WebSocket -->
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch"/>
+
+    <!-- Visualization on Rviz -->
+    <include file="$(find px_100_teleop)/launch/px_display.launch"/>
+    
+    <!-- Hosting webApp -->
+    <node name="pxApp" pkg="px_100_teleop" type="pxApp.py"/> 
+</launch>

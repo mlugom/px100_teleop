@@ -7,7 +7,7 @@
     <arg name="use_joint_state"         default="true"/>
     <arg name="use_cmd_vel"             default="false"/>
   
-    <param name="dynamixel_info"          value="$(find px_robot)/config/joints.yaml"/>
+    <param name="dynamixel_info"          value="$(find px_100_teleop)/config/joints.yaml"/>
   
     <node name="$(arg namespace)" pkg="dynamixel_workbench_controllers" type="dynamixel_workbench_controllers"
           required="true" output="screen" args="$(arg usb_port) $(arg dxl_baud_rate)">
@@ -22,6 +22,6 @@
           seperation_between_wheels: 0.160  <!--default value is set by reference of TB3-->
           radius_of_wheel: 0.033            <!--default value is set by reference of TB3-->
       </rosparam>
-      <!--<remap from="/dynamixel_workbench/joint_trajectory" to="joint_trajectory"/>-->
+      <remap from="/dynamixel_workbench/joint_trajectory" to="joint_trajectory"/>
     </node>
   </launch>

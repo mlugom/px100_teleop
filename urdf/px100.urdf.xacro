@@ -18,7 +18,7 @@
   </xacro:if>
 
   <material name="interbotix_black">
-    <texture filename="package://r2d2_urdf/meshes/interbotix_black.png"/>
+    <texture filename="package://px_100_teleop/meshes/interbotix_black.png"/>
   </material>
 
   <xacro:if value="$(arg use_world_frame)">
@@ -33,14 +33,14 @@
     <visual>
       <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://r2d2_urdf/meshes/px100_1_base.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://px_100_teleop/meshes/px100_1_base.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="interbotix_black"/>
     </visual>
     <collision>
       <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://r2d2_urdf/meshes/px100_1_base.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://px_100_teleop/meshes/px100_1_base.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -50,7 +50,7 @@
     </inertial>
   </link>
 
-  <joint name="waist" type="revolute">
+  <joint name="joint_1" type="revolute">
     <axis xyz="0 0 1"/>
     <limit effort="1" lower="${-pi + pi_offset}" upper="${pi - pi_offset}" velocity="${pi}"/>
     <origin rpy="0 0 0" xyz="0 0 0.05085"/>
@@ -73,14 +73,14 @@
     <visual>
       <origin rpy="0 0 ${pi/2}" xyz="0 0 -0.0022"/>
       <geometry>
-        <mesh filename="package://r2d2_urdf/meshes/px100_2_shoulder.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://px_100_teleop/meshes/px100_2_shoulder.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="interbotix_black"/>
     </visual>
     <collision>
       <origin rpy="0 0 ${pi/2}" xyz="0 0 -0.0022"/>
       <geometry>
-        <mesh filename="package://r2d2_urdf/meshes/px100_2_shoulder.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://px_100_teleop/meshes/px100_2_shoulder.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -90,7 +90,7 @@
     </inertial>
   </link>
 
-  <joint name="shoulder" type="revolute">
+  <joint name="joint_2" type="revolute">
     <axis xyz="0 1 0"/>
     <limit effort="2" lower="${radians(-111)}" upper="${radians(107)}" velocity="${pi}"/>
     <origin rpy="0 0 0" xyz="0 0 0.04225"/>
@@ -113,14 +113,14 @@
     <visual>
       <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://r2d2_urdf/meshes/px100_3_upper_arm.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://px_100_teleop/meshes/px100_3_upper_arm.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="interbotix_black"/>
     </visual>
     <collision>
       <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://r2d2_urdf/meshes/px100_3_upper_arm.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://px_100_teleop/meshes/px100_3_upper_arm.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -130,7 +130,7 @@
     </inertial>
   </link>
 
-  <joint name="elbow" type="revolute">
+  <joint name="joint_3" type="revolute">
     <axis xyz="0 1 0"/>
     <limit effort="2" lower="${radians(-121)}" upper="${radians(92)}" velocity="${pi}"/>
     <origin rpy="0 0 0" xyz="0.035 0 0.1"/>
@@ -153,14 +153,14 @@
     <visual>
       <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://r2d2_urdf/meshes/px100_4_forearm.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://px_100_teleop/meshes/px100_4_forearm.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="interbotix_black"/>
     </visual>
     <collision>
       <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://r2d2_urdf/meshes/px100_4_forearm.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://px_100_teleop/meshes/px100_4_forearm.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -170,7 +170,7 @@
     </inertial>
   </link>
 
-  <joint name="wrist_angle" type="revolute">
+  <joint name="joint_4" type="revolute">
     <axis xyz="0 1 0"/>
     <limit effort="1" lower="${radians(-100)}" upper="${radians(123)}"  velocity="${pi}"/>
     <origin rpy="0 0 0" xyz="0.1 0 0"/>
@@ -193,14 +193,14 @@
     <visual>
       <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://r2d2_urdf/meshes/px100_5_gripper.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://px_100_teleop/meshes/px100_5_gripper.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="interbotix_black"/>
     </visual>
     <collision>
       <origin rpy="0 0 ${pi/2}" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://r2d2_urdf/meshes/px100_5_gripper.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://px_100_teleop/meshes/px100_5_gripper.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -224,7 +224,7 @@
     </inertial>
   </link>
 
-  <joint name="gripper" type="continuous">
+  <joint name="gripper" type="fixed">
     <axis xyz="1 0 0"/>
     <limit effort="1" velocity="${pi}"/>
     <origin rpy="0 0 0" xyz="0.0055 0 0"/>
@@ -247,14 +247,14 @@
     <visual>
       <origin rpy="0 0 ${pi/2}" xyz="-0.0685 0 0"/>
       <geometry>
-        <mesh filename="package://r2d2_urdf/meshes/px100_6_gripper_prop.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://px_100_teleop/meshes/px100_6_gripper_prop.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="interbotix_black"/>
     </visual>
     <collision>
       <origin rpy="0 0 ${pi/2}" xyz="-0.0685 0 0"/>
       <geometry>
-        <mesh filename="package://r2d2_urdf/meshes/px100_6_gripper_prop.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://px_100_teleop/meshes/px100_6_gripper_prop.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -279,14 +279,14 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://r2d2_urdf/meshes/px100_9_ar_tag.stl" scale="0.001 0.001 0.001"/>
+          <mesh filename="package://px_100_teleop/meshes/px100_9_ar_tag.stl" scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="interbotix_black"/>
       </visual>
       <collision>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://r2d2_urdf/meshes/px100_9_ar_tag.stl" scale="0.001 0.001 0.001"/>
+          <mesh filename="package://px_100_teleop/meshes/px100_9_ar_tag.stl" scale="0.001 0.001 0.001"/>
         </geometry>
       </collision>
       <inertial>
@@ -313,14 +313,14 @@
       <visual>
         <origin rpy="0 0 ${pi/2}" xyz="-0.063 0 0"/>
         <geometry>
-          <mesh filename="package://r2d2_urdf/meshes/px100_7_gripper_bar.stl" scale="0.001 0.001 0.001"/>
+          <mesh filename="package://px_100_teleop/meshes/px100_7_gripper_bar.stl" scale="0.001 0.001 0.001"/>
         </geometry>
         <material name="interbotix_black"/>
       </visual>
       <collision>
         <origin rpy="0 0 ${pi/2}" xyz="-0.063 0 0"/>
         <geometry>
-          <mesh filename="package://r2d2_urdf/meshes/px100_7_gripper_bar.stl" scale="0.001 0.001 0.001"/>
+          <mesh filename="package://px_100_teleop/meshes/px100_7_gripper_bar.stl" scale="0.001 0.001 0.001"/>
         </geometry>
       </collision>
       <inertial>
@@ -348,13 +348,13 @@
 
     <xacro:if value="$(arg show_gripper_fingers)">
 
-      <joint name="left_finger" type="prismatic">
-        <axis xyz="0 1 0"/>
-        <limit effort="5" lower="0.015" upper="0.037" velocity="1"/>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
+      <joint name="left_finger" type="fixed">
+        <!--<axis xyz="0 1 0"/>-->
+        <!--<limit effort="5" lower="0.015" upper="0.037" velocity="1"/>-->
+        <origin rpy="0 0 0" xyz="0 0.01 0"/>
         <parent link="$(arg robot_name)/fingers_link"/>
         <child link="$(arg robot_name)/left_finger_link"/>
-        <dynamics friction="0.1"/>
+        <!--<dynamics friction="0.1"/>-->
       </joint>
 
       <transmission name="trans_left_finger">
@@ -371,14 +371,14 @@
         <visual>
           <origin rpy="${pi} ${pi} 0" xyz="0 0.005 0"/>
           <geometry>
-            <mesh filename="package://r2d2_urdf/meshes/px100_8_gripper_finger.stl" scale="0.001 0.001 0.001"/>
+            <mesh filename="package://px_100_teleop/meshes/px100_8_gripper_finger.stl" scale="0.001 0.001 0.001"/>
           </geometry>
           <material name="interbotix_black"/>
         </visual>
         <collision>
           <origin rpy="${pi} ${pi} 0" xyz="0 0.005 0"/>
           <geometry>
-            <mesh filename="package://r2d2_urdf/meshes/px100_8_gripper_finger.stl" scale="0.001 0.001 0.001"/>
+            <mesh filename="package://px_100_teleop/meshes/px100_8_gripper_finger.stl" scale="0.001 0.001 0.001"/>
           </geometry>
         </collision>
         <inertial>
@@ -388,10 +388,10 @@
         </inertial>
       </link>
 
-      <joint name="right_finger" type="prismatic">
-        <axis xyz="0 1 0"/>
-        <limit effort="5" lower="-0.037" upper="-0.015" velocity="1"/>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
+      <joint name="right_finger" type="fixed">
+        <!--<axis xyz="0 1 0"/>-->
+        <!--<limit effort="5" lower="-0.037" upper="-0.015" velocity="1"/>-->
+        <origin rpy="0 0 0" xyz="0 -0.01 0"/>
         <parent link="$(arg robot_name)/fingers_link"/>
         <child link="$(arg robot_name)/right_finger_link"/>
         <dynamics friction="0.1"/>
@@ -414,14 +414,14 @@
         <visual>
           <origin rpy="0 ${pi} 0" xyz="0 -0.005 0"/>
           <geometry>
-            <mesh filename="package://r2d2_urdf/meshes/px100_8_gripper_finger.stl" scale="0.001 0.001 0.001"/>
+            <mesh filename="package://px_100_teleop/meshes/px100_8_gripper_finger.stl" scale="0.001 0.001 0.001"/>
           </geometry>
           <material name="interbotix_black"/>
         </visual>
         <collision>
           <origin rpy="0 ${pi} 0" xyz="0 -0.005 0"/>
           <geometry>
-            <mesh filename="package://r2d2_urdf/meshes/px100_8_gripper_finger.stl" scale="0.001 0.001 0.001"/>
+            <mesh filename="package://px_100_teleop/meshes/px100_8_gripper_finger.stl" scale="0.001 0.001 0.001"/>
           </geometry>
         </collision>
         <inertial>
