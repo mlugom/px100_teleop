@@ -64,9 +64,9 @@ As you might have noticed, the process in each case is basically setting an IP a
 Once prepared the package, on the machine which is connected to the robot, follow the next steps to make it work:
 1. Connect the FTDI from the robot to the machine, and then connect the power supply.
 2. Grant permissions of use to the USB port by running the following command on a terminal
-   ~~~~
-   sudo chmod 777 /dev/ttyUSB0
-   ~~~~
+  ~~~~
+  sudo chmod 777 /dev/ttyUSB0
+  ~~~~
 3. Launch a terminal and run the following command to start the master node
   ~~~~
   roscore
@@ -87,4 +87,5 @@ That should be enough to start all the services needed to operate. Now, on the d
 
 ## Videos
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FJkg0pcfAt8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[LAN Operation Video](https://youtu.be/FJkg0pcfAt8)
+[Internet Operation Video](https://youtu.be/y2Nrk69Bfws)
