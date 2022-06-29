@@ -87,8 +87,4 @@ That should be enough to start all the services needed to operate. Now, on the d
 
 ## Videos
 
-
-<video src="assets/VID_1.mp4" width="300px" controls>
-  <source src="assets/VID_1.mp4" type="video/mp4">
-  Not supported
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FJkg0pcfAt8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
