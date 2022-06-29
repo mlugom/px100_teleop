@@ -91,3 +91,6 @@ That should be enough to start all the services needed to operate. Now, on the d
 
 
 [Internet Operation Video](https://youtu.be/y2Nrk69Bfws)
+
+## Robot Inspection Report 
+For the development of the practice, an inspection report was done. It can be found on [this link](assets/Informe%20de%20inspecci%C3%B3n%20PX-100.pdf). Likewise, a complete tracing of the practica was done in [Coda](https://coda.io/d/_d19biUTqpPx/Practica-en-Teleoperacion-de-Robots_suyHu).
