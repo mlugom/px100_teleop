@@ -113,8 +113,6 @@ function readJointStates(){
 
 // Connection with ROS
 var ros = new ROSLIB.Ros({
-    //url: 'ws://localhost:9090'
-    //url: 'ws://192.168.1.70:9090'
     url: 'ws://181.61.68.202:9090'
 });
 
