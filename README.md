@@ -88,4 +88,6 @@ That should be enough to start all the services needed to operate. Now, on the d
 ## Videos
 
 [LAN Operation Video](https://youtu.be/FJkg0pcfAt8)
+
+
 [Internet Operation Video](https://youtu.be/y2Nrk69Bfws)
