@@ -88,7 +88,7 @@ That should be enough to start all the services needed to operate. Now, on the d
 ## Videos
 
 
-<video width="500px" controls>
+<video src="assets/VID_1.mp4" width="300px" controls>
   <source src="assets/VID_1.mp4" type="video/mp4">
   Not supported
 </video>
