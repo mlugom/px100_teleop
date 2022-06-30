@@ -48,8 +48,18 @@ The general process for preparing the package is the following one:
 Now, depending on the operating mode you will use, do the following:
 - For local work:
   - Go to '/web/htmlPX/js/functions.js', find the ros-variable-creation code section and set the value for 'url' atribute as 'ws://localhost:9090'.
+  ~~~~ js
+  var ros = new ROSLIB.Ros({
+    url: 'ws://localhost:9090'
+  });
+  ~~~~
 - For LAN work:
   - Go to '/web/htmlPX/js/functions.js' and set the value for 'url' attribute as 'ws://{IP_ADDRESS}:9090' in the same section as previous one, replacing {IP_ADDRESS} with your private machine IP address.
+  ~~~~ js
+  var ros = new ROSLIB.Ros({
+    url: 'ws://{IP_ADDRESS}:9090'
+  });
+  ~~~~
 - For Internet work: in order to ensure communications along the internet, a *port forwarding* process is needed.
   - Check for your private default gateway IP address.
   - Access to that IP address through a web browser.
@@ -87,7 +97,9 @@ That should be enough to start all the services needed to operate. Now, on the d
 2. Type on the search bar '{IP_ADDRESS}:5000'.
    
    **Note:** {IP_ADDRESS} should be replaced with the real IP address which is needed according to the workcase. If it is local, you should use 'localhost'; if it is on a LAN, you should use your private machine IP; and if it is through the Internet, you should use your public network IP.
-3. You should be watching the web interface by now. Press the 'Read Joint States' button to make the interface catch the actual joint angles on the robot. This is just for safety, to avoid rushed moves and unexpected collisions
+3. You should be watching the web interface by now. Press the 'Read Joint States' button to make the interface catch the actual joint angles on the robot. This is just for safety, to avoid rushed moves and unexpected collisions.
+
+![GUI image](assets/GUI_image.png)
 4. That's all. You can play with the sliders to move the robot joints.
 
 
