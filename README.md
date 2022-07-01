@@ -105,10 +105,10 @@ That should be enough to start all the services needed to operate. Now, on the d
 
 ## Videos
 
-[Operation video](assets/video_teleop_edited.mp4)
+[Operation video](https://youtu.be/KBmtYa6jgHk)
 
 
-[Operation with visualization on Rviz](assets/video_teleop_rviz_edited.mp4)
+[Operation with visualization on Rviz](https://youtu.be/a0B0C95MvHE)
 
 ## Robot Inspection Report 
 For the development of the practice, an inspection report was done. It can be found on [this link](assets/Informe%20de%20inspecci%C3%B3n%20PX-100.pdf). Likewise, a complete tracing of the practice was done in [Coda](https://coda.io/d/_d19biUTqpPx/Practica-en-Teleoperacion-de-Robots_suyHu).
