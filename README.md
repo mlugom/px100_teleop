@@ -89,7 +89,7 @@ Once prepared the package, on the machine which is connected to the robot, follo
   ~~~~
 4. Launch a new terminal and run the following command
   ~~~~
-  roslaunch px_100_teleop px_teleop.launch
+  roslaunch px100_teleop px_teleop.launch
   ~~~~
 
 That should be enough to start all the services needed to operate. Now, on the device which will operate the robot, follow the next steps:
